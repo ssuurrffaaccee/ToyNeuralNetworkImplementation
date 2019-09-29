@@ -1,0 +1,32 @@
+digraph{
+    N1[label="Const:1"]
+    
+    N2[label="Grad:1"]
+    N4[label="Const:2"]
+
+    N5[label="Grad:1"]
+    N7[label="Const:3"]
+    
+    N1->N4[color="blue"];
+    N2->N4[color="blue"];
+    N4->N7[color="blue"];
+    N5->N7[color="blue"];
+    N3[label="Add1"] 
+    N6[label="Add2"]
+
+
+    N3->N4[color="green"];
+    
+
+    N6->N7[color="green"];
+
+    N6->N3[color="red"]
+
+    {rank=same; N3,N6}
+    {rank=same; N1,N4,N7}
+    {rank=same; N2,N5}
+
+
+
+
+}
